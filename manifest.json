@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Sienge Custom Login",
+  "version": "1.1",
+  "description": "Customiza botão e fundo da tela de login do Sienge",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://lupema.sienge.com.br/*",
+        "https://login.sienge.com.br/*"
+      ],
+      "css": ["style.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*"],
+      "matches": [
+        "https://lupema.sienge.com.br/*",
+        "https://login.sienge.com.br/*"
+      ]
+    }
+  ]
+}

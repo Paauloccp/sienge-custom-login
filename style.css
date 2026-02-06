@@ -1,0 +1,56 @@
+/* Botão principal do login - VERDE PERSONALIZADO */
+#btnEntrarComSiengeID.Button-prim {
+  background-color: #729F2D !important;
+  border-color: #729F2D !important;
+  color: #ffffff !important;
+}
+
+/* Hover (um pouco mais escuro) */
+#btnEntrarComSiengeID.Button-prim:hover {
+  background-color: #5f8526 !important;
+  border-color: #5f8526 !important;
+}
+
+/* Clique / ativo */
+#btnEntrarComSiengeID.Button-prim:active {
+  background-color: #4f6f20 !important;
+  border-color: #4f6f20 !important;
+}
+
+/* Foco (tab / acessibilidade) */
+#btnEntrarComSiengeID.Button-prim:focus {
+  box-shadow: 0 0 0 3px rgba(114, 159, 45, 0.35) !important;
+}
+
+ /* Card central de login */
+div.login div._inner div._content {
+  background-color: rgba(244, 242, 238, 0.92) !important;
+  border-radius: 48px 0 !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
+}
+
+._content {
+  background-color: rgba(244, 242, 238, 0.92) !important;
+}
+
+/* bloco das logos */
+.logos-wrapper{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  gap: 12px !important;
+  margin: 0 0 12px 0 !important;
+
+  /* move o conjunto (ajuste fino) */
+  transform: translateX(0px) !important;
+}
+
+/* deixa a Lupema num tamanho mais proporcional */
+.lupema-logo{
+  height: 95px !important;
+  width: auto !important;
+  display:block !important;
+  margin-top: -2px !important;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+  opacity: 0.95;
+}
