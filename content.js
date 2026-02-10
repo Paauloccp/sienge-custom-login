@@ -59,6 +59,34 @@ if (host === "lupema.sienge.com.br") {
       childList: true,
       subtree: true,
     });
+
+    // 3. funções de saudação
+function saudacaoPorHorario() {
+  const h = new Date().getHours();
+
+  if (h >= 22 || h < 5) return "Hora de dormir né? 😴";
+  if (h < 12) return "Bom dia!";
+  if (h < 18) return "Boa tarde!";
+  return "Boa noite!";
+}
+
+function trocarTituloBemVindo() {
+  const titulo = document.querySelector('#divLogin h2');
+  if (!titulo) return;
+
+  const novo = saudacaoPorHorario();
+  if (titulo.textContent.trim() === novo) return;
+
+  titulo.textContent = novo;
+}
+
+// 4. ativa saudação
+trocarTituloBemVindo();
+new MutationObserver(trocarTituloBemVindo).observe(document.body, {
+  childList: true,
+  subtree: true
+});
+
   })();
 
   // ===== Fundo (tela antiga) =====
