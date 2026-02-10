@@ -61,14 +61,23 @@ if (host === "lupema.sienge.com.br") {
     });
 
     // 3. funções de saudação
-function saudacaoPorHorario() {
-  const h = new Date().getHours();
-
-  if (h >= 22 || h < 5) return "Hora de dormir né? 😴";
-  if (h < 12) return "Bom dia!";
-  if (h < 18) return "Boa tarde!";
-  return "Boa noite!";
-}
+    function saudacaoPorHorario() {
+      const agora = new Date();
+      const hora = agora.getHours(); // 0–23
+      const dia = agora.getDay();    // 0=Dom, 1=Seg, ..., 5=Sex, 6=Sáb
+    
+      // Sexta-feira ganha prioridade absoluta 😎
+      if (dia === 5) return "Sextou! 🎉";
+      if (dia === 1 && hora < 10) return "Boa semana! ☕"
+    
+      // Easter egg da madrugada
+      if (hora >= 22 || hora < 5) return "Hora de dormir né? 😴";
+    
+      if (hora < 12) return "Bom dia!";
+      if (hora < 18) return "Boa tarde!";
+      return "Boa noite!";
+    }
+    
 
 function trocarTituloBemVindo() {
   const titulo = document.querySelector('#divLogin h2');
